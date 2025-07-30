@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
+import { Navbar } from './components/Navbar';
+import { HomePage } from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import ForecastingPage from './pages/ForecastingPage';
-import InventoryPage from './pages/InventoryPage';
-import AnalyticsPage from './pages/AnalyticsPage';
-import DataInputPage from './pages/DataInputPage';
-import DocumentationPage from './pages/DocumentationPage';
+import { InventoryPage } from './pages/InventoryPage';
+import { AnalyticsPage } from './pages/AnalyticsPage';
+import { DataInputPage } from './pages/DataInputPage';
+import { DocumentationPage } from './pages/DocumentationPage';
 
 function App() {
   return (

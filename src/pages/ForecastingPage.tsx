@@ -2,24 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { TrendingUp, Calendar, Target, BarChart3, Brain, Activity, Zap, AlertCircle } from 'lucide-react';
 import { generateForecastData, productMaster } from '../utils/dataGenerator';
 
-// Add types for forecast and model comparison
+// Update if generateForecastData returns more fields
 type Forecast = { predicted: number };
-type ModelComparison = {
+
+type ModelComparisonItem = {
   model: string;
   accuracy: string;
   avgPrediction: number;
   mape: string;
   rmse: string;
   trainingTime: string;
-}[];
+};
 
 const ForecastingPage = () => {
   const [selectedProduct, setSelectedProduct] = useState('ELEC-001');
   const [forecastPeriod, setForecastPeriod] = useState('30');
   const [selectedModel, setSelectedModel] = useState('xgboost');
   const [forecastData, setForecastData] = useState<Forecast[]>([]);
+  const [modelComparison, setModelComparison] = useState<ModelComparisonItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [modelComparison, setModelComparison] = useState<ModelComparison>([]);
 
   const models = [
     { 
@@ -85,10 +86,10 @@ const ForecastingPage = () => {
     runForecast();
   }, [selectedProduct, forecastPeriod, selectedModel]);
 
-  const generateModelComparison = async (productId: string) => {
+  const generateModelComparison = async (productId: string): Promise<ModelComparisonItem[]> => {
     // Simulate running all models for comparison
     const allModels = ['prophet', 'xgboost', 'arima', 'neural'];
-    const comparisons = [];
+    const comparisons: ModelComparisonItem[] = [];
     
     for (const model of allModels) {
       const forecast = generateForecastData(productId, 7, model as any);
