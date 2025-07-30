@@ -163,23 +163,6 @@ ROP = (Average Daily Demand × Lead Time) + Safety Stock
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 18+ and npm
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-org/smartsupply.git
-cd smartsupply
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
 ### Quick Start Guide
 1. **Upload Data**: Navigate to Data Input → Upload your sales history (CSV/Excel)
 2. **Configure Settings**: Set service levels, lead times, and cost parameters
@@ -276,44 +259,3 @@ date,product_id,product_name,category,store,quantity,unit_price,total_sales
 - **Solution**: Product-specific model selection and ABC analysis
 - **Impact**: 25% improvement in inventory turnover
 
-## 🔮 Future Enhancements
-
-### Phase 2 Development
-- [ ] Mobile app for store managers
-- [ ] Advanced supplier integration
-- [ ] Predictive maintenance for equipment
-- [ ] Customer demand sensing from social media
-
-### Phase 3 Development
-- [ ] AI-powered pricing optimization
-- [ ] Supply chain risk assessment
-- [ ] Sustainability metrics and green inventory
-- [ ] Advanced IoT sensor integration
-
-
-### Development Setup
-```bash
-# Install development dependencies
-npm install
-
-# Run tests
-npm test
-
-# Run linting
-npm run lint
-
-# Build for production
-npm run build
-```
-
-
-## 🏆 Acknowledgments
-
-- Meta's Prophet team for the excellent forecasting library
-- The XGBoost community for gradient boosting innovations
-- Small retail businesses who provided valuable feedback and use cases
-- Open source contributors who made this project possible
-
----
-
-**SmartSupply** - Transforming inventory management for the digital age 🚀
